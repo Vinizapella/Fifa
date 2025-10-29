@@ -1,7 +1,8 @@
 package com.SistemaFifa;
 
-
 import com.SistemaFifa.controller.AppController;
+import com.SistemaFifa.controller.JogadorController;
+import com.SistemaFifa.controller.TimeController;
 import com.SistemaFifa.repository.JogadorRepository;
 import com.SistemaFifa.repository.TimeRepository;
 import com.SistemaFifa.repository.impl.JogadorMemoriaRepository;
@@ -15,16 +16,19 @@ import com.SistemaFifa.view.AppView;
 public class Main {
     public static void main(String[] args) {
 
+        AppView view = new AppView();
+
         TimeRepository timeRepository = new TimeMemoriaRepository();
         JogadorRepository jogadorRepository = new JogadorMemoriaRepository();
 
         TimeService timeService = new TimeServiceImpl(timeRepository, jogadorRepository);
         JogadorService jogadorService = new JogadorServiceImpl(jogadorRepository, timeRepository);
 
-        AppView view = new AppView();
+        TimeController timeController = new TimeController(view, timeService, jogadorService);
+        JogadorController jogadorController = new JogadorController(view, jogadorService);
 
-        AppController controller = new AppController(view, timeService, jogadorService);
+        AppController appController = new AppController(view, timeController, jogadorController);
 
-        controller.iniciar();
+        appController.iniciar();
     }
 }
