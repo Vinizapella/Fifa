@@ -18,47 +18,58 @@ public class Jogador {
     }
 
     public int getIdade() {
+
         return Period.between(this.dataNascimento, LocalDate.now()).getYears();
     }
 
 
     public Long getId() {
+
         return id;
     }
 
     public void setId(Long id) {
+
         this.id = id;
     }
 
     public String getNome() {
+
         return nome;
     }
 
     public void setNome(String nome) {
+
         this.nome = nome;
     }
 
     public String getPosicao() {
+
         return posicao;
     }
 
     public void setPosicao(String posicao) {
+
         this.posicao = posicao;
     }
 
     public LocalDate getDataNascimento() {
+
         return dataNascimento;
     }
 
     public void setDataNascimento(LocalDate dataNascimento) {
+
         this.dataNascimento = dataNascimento;
     }
 
     public Long getTimeId() {
+
         return timeId;
     }
 
     public void setTimeId(Long timeId) {
+
         this.timeId = timeId;
     }
 

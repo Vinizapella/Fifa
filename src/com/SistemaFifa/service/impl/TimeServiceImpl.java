@@ -28,11 +28,13 @@ public class TimeServiceImpl implements TimeService {
 
     @Override
     public List<Time> listarTodos() {
+
         return timeRepository.listarTodos();
     }
 
     @Override
     public Optional<Time> buscarPorId(Long id) {
+
         return timeRepository.buscarPorId(id);
     }
 

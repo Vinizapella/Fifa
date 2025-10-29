@@ -41,6 +41,7 @@ public class TimeController {
     }
 
     private void listarTimes() {
+
         view.mostrarListaTimes(timeService.listarTodos());
     }
 

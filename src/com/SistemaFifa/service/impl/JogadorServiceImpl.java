@@ -29,6 +29,7 @@ public class JogadorServiceImpl implements JogadorService {
 
     @Override
     public List<Jogador> listarTodos() {
+
         return jogadorRepository.listarTodos();
     }
 
@@ -80,6 +81,8 @@ public class JogadorServiceImpl implements JogadorService {
 
     @Override
     public List<Jogador> listarJogadoresPorTime(Long timeId) {
+
+
         return jogadorRepository.buscarPorTimeId(timeId);
     }
 }

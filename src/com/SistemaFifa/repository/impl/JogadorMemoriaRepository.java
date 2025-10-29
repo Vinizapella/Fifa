@@ -25,16 +25,19 @@ public class JogadorMemoriaRepository implements JogadorRepository {
 
     @Override
     public List<Jogador> listarTodos() {
+
         return new ArrayList<>(bancoJogadores.values());
     }
 
     @Override
     public Optional<Jogador> buscarPorId(Long id) {
+
         return Optional.ofNullable(bancoJogadores.get(id));
     }
 
     @Override
     public void remover(Long id) {
+
         bancoJogadores.remove(id);
     }
 

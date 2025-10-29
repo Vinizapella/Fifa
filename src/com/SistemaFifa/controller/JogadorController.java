@@ -36,6 +36,7 @@ public class JogadorController {
     }
 
     private void listarTodosJogadores() {
+
         view.mostrarListaJogadores(jogadorService.listarTodos());
     }
 
@@ -52,6 +53,7 @@ public class JogadorController {
     }
 
     private void atualizarJogador() {
+
         view.mostrarMensagem("Função de atualizar jogador ainda não implementada.");
     }
 

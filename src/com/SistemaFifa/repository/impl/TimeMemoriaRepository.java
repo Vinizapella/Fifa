@@ -24,16 +24,19 @@ public class TimeMemoriaRepository implements TimeRepository {
 
     @Override
     public List<Time> listarTodos() {
+
         return new ArrayList<>(bancoTimes.values());
     }
 
     @Override
     public Optional<Time> buscarPorId(Long id) {
+
         return Optional.ofNullable(bancoTimes.get(id));
     }
 
     @Override
     public void remover(Long id) {
+
         bancoTimes.remove(id);
     }
 }
