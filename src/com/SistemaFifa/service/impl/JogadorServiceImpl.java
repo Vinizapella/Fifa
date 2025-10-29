@@ -35,6 +35,7 @@ public class JogadorServiceImpl implements JogadorService {
 
     @Override
     public Optional<Jogador> buscarPorId(Long id) {
+
         return jogadorRepository.buscarPorId(id);
     }
 
